@@ -14,7 +14,7 @@
 
 				$parametros = array();
 				$parametros['postagens'] = $colecPostagens;
-				var_dump($colecPostagens);
+				//var_dump($colecPostagens);
 
 				$conteudo = $template->render($parametros);
 				echo $conteudo;
