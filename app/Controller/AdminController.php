@@ -71,6 +71,19 @@
 				echo '<script>alert("'.$e->getMessage().'");</script>';
 				echo '<script>location.href="http://localhost/PROJS/VIDEO_AULAS/SERIE/02_PHP+MVC+CRUD/?pagina=admin&metodo=change&id='.$_POST['id'].'"</script>';
 			}
+		}
+
+		public function delete($paramId)
+		{
+			try {
+				Postagem::delete($paramId);
+
+				echo '<script>alert("Publicação deletada com sucesso!");</script>';
+				echo '<script>location.href="http://localhost/PROJS/VIDEO_AULAS/SERIE/02_PHP+MVC+CRUD/?pagina=admin&metodo=index"</script>';
+			} catch (Exception $e) {
+				echo '<script>alert("'.$e->getMessage().'");</script>';
+				echo '<script>location.href="http://localhost/PROJS/VIDEO_AULAS/SERIE/02_PHP+MVC+CRUD/?pagina=admin&metodo=index"</script>';
+			}
 			
 		}
 	}
